@@ -4,6 +4,9 @@
 - Flagged major stock-exposure days ⭐ for ultimate visibility.  
 - Keywords optimized for **high stock market searchability**.  
 - Visuals tailored to international trends, seasonal moments, and **top-selling stock formats**.
+- 
+**📅 View the Global Stock Content Calendar on [Google Calendar](https://calendar.google.com/calendar/u/0?cid=YTMzZjExYzUyMmI1NTk3NjNjY2YzMzEwOWZlYWEyOTljZTk1MWZiZjNjYzFmYjVhNTViYzVmMGY5MDA0NDVhOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t):**  
+*(You can add this to your personal calendar apps for auto-reminders of all key events.)*
 
 ## Table of Contents
 
