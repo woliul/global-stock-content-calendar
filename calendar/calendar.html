@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Interactive Calendar</title>
+  <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <div class="max-w-6xl mx-auto p-4">
+    <h1 class="text-4xl font-bold mb-6 text-center">📅 2025 Content Calendar</h1>
+
+    <!-- Month Selector -->
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('January')">January</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('February')">February</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('March')">March</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('April')">April</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('May')">May</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('June')">June</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('July')">July</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('August')">August</button>
+      <button class="month-btn bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="showMonth('September')">September</button>
+      <!-- add more months -->
+    </div>
+
+    <!-- Calendar Content -->
+    <div id="calendar-content" class="space-y-4">
+      <!-- Dynamically filled by JS -->
+    </div>
+  </div>
+
+  <script>
+    const calendarData = {
+      "January": [
+        { date: "Jan 1", event: "New Year's Day", link: "https://en.wikipedia.org/wiki/New_Year%27s_Day", contentIdea: "3D fireworks scenes, party backgrounds, typography art.", keywords: "new year, celebration, fireworks, party", visualTips: "Vibrant colors (gold, silver, black), confetti effects, minimalist '2025' typography art.", flagged: true },
+        { date: "Jan 4", event: "World Braille Day", link: "https://en.wikipedia.org/wiki/World_Braille_Day", contentIdea: "Inclusive diversity-themed illustration or tactile 3D design.", keywords: "braille, accessibility, diversity, inclusion", visualTips: "Subtle textures (dots, embossed look), soft blue/purple tones, minimalist style." },
+        // Add more January data...
+      ],
+      "February": [
+        { date: "Feb 2", event: "Groundhog Day", link: "https://en.wikipedia.org/wiki/Groundhog_Day", contentIdea: "Fun cartoonish groundhog popping from burrow.", keywords: "groundhog, spring, winter, tradition", visualTips: "Soft natural colors, cute 3D groundhog characters, winter-to-spring transition scenes." },
+        { date: "Feb 10–13", event: "Carnival / Mardi Gras", link: "https://en.wikipedia.org/wiki/Mardi_Gras", contentIdea: "Colorful 3D beads, masks, party parade visuals.", keywords: "carnival, mardi gras, party, celebration", visualTips: "Bright purple, gold, green colors, festive mask textures, confetti-filled scenes.", flagged: true },
+        // Add more February data...
+      ],
+      "March": [
+        // March data
+      ],
+      "April": [
+        // April data
+      ],
+      // Add other months...
+    };
+
+    function showMonth(month) {
+      const container = document.getElementById('calendar-content');
+      container.innerHTML = ''; // Clear previous
+
+      if (!calendarData[month]) {
+        container.innerHTML = `<p class="text-center text-gray-500">No data available.</p>`;
+        return;
+      }
+
+      calendarData[month].forEach(event => {
+        const card = document.createElement('div');
+        card.className = "bg-white p-4 rounded shadow-md hover:shadow-lg transition";
+
+        card.innerHTML = `
+          <div class="flex items-center justify-between">
+            <div>
+              <h3 class="text-xl font-bold">
+                ${event.flagged ? `<i class="fas fa-star text-yellow-400 mr-2"></i>` : `<i class="fas fa-calendar-day text-blue-400 mr-2"></i>`}
+                <a href="${event.link}" target="_blank" class="hover:underline">${event.event}</a>
+              </h3>
+              <p class="text-sm text-gray-500">${event.date}</p>
+            </div>
+          </div>
+          <div class="mt-2">
+            <p><strong>Idea:</strong> ${event.contentIdea}</p>
+            <p><strong>Keywords:</strong> ${event.keywords}</p>
+            <p><strong>Visual Tips:</strong> ${event.visualTips}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    // Load January by default
+    window.onload = () => showMonth('January');
+  </script>
+
+</body>
+</html>
