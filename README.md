@@ -1,5 +1,8 @@
 # [Global Stock Content Calendar](https://github.com/woliul/global-stock-content-calendar/blob/main/calendar.md)  
 
+**📅 View the Global Stock Content Calendar on [Google Calendar](https://calendar.google.com/calendar/u/0?cid=YTMzZjExYzUyMmI1NTk3NjNjY2YzMzEwOWZlYWEyOTljZTk1MWZiZjNjYzFmYjVhNTViYzVmMGY5MDA0NDVhOUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t):**  
+*(You can add this to your personal calendar apps for auto-reminders of all key events.)*
+
 **[Global Stock Content Calendar](https://github.com/woliul/global-stock-content-calendar/blob/main/calendar.md)** is a comprehensive, Markdown‑native content planning toolkit designed specifically for 3D artists, illustrators, and graphic designers targeting stock marketplaces (Shutterstock, Adobe Stock, Unsplash Plus, 123RF, etc.).  
 
 Every month features a clean table of:  
